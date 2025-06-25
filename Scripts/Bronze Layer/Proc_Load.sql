@@ -1,6 +1,6 @@
 /*
-Thie Stored Procedure used to load data from source files into Bronze Layer, calculate the time required to load each table, and
-calculate the overall time required for the whole process.
+The stored Procedure used to load data from source files into the Bronze Layer, calculate the time required to load each table, and
+Calculate the overall time required for the whole process.
 
 This SP doesn't accept any parameters or return any value.
 
