@@ -8,11 +8,8 @@ An **end-to-end Data Warehouse project** built using SQL Server, showcasing ETL 
 1. [Overview](#-overview)  
 2. [Requirements](#-requirements)  
 3. [Folder Details](#-folder-details)  
-6. [Usage & ETL](#-usage--etl)  
-7. [Sample Reports & Queries](#-sample-reports--queries)  
-8. [Resources](#-resources)  
-9. [License](#-license)  
-10. [Contact](#-contact)
+4. [License](#-license)  
+5. [Contact](#-contact)
 
 
 ## 🧠 Overview
@@ -52,6 +49,33 @@ The aim is to demonstrate data modeling, warehousing, and analytics skills using
 |               |     |
 | `README.md`   | This file.                                                                 |
 | `LICENSE`     | MIT License for project usage.                                              |
+
+
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+
+You are free to:
+
+- ✅ Use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+Under the following conditions:
+
+- 🧾 The above copyright notice and this permission notice must be included in all copies.
+- ⚠️ The software is provided **"as is"**, without warranty of any kind.
+
+For full details, see the [LICENSE](LICENSE) file in this repository.
+
+
+## ✉️ Contact
+
+If you have any questions, suggestions, or collaboration ideas, feel free to reach out:
+
+- 🧑‍💻 **GitHub**: [@A7medEhabb](https://github.com/A7medEhabb)
+- 📧 **Email**: [ehaba9272@gmail.com](mailto:ehaba9272@gmail.com)
+- 💼 **LinkedIn**: [Ahmed Ehab](https://www.linkedin.com/in/ahmed-ehab-73635624a/) 
+
 
 
 
