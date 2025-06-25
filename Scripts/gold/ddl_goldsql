@@ -1,0 +1,67 @@
+create view gold.dim_customers as 
+
+-- all needed columns from all customers tables
+-- we need to generate a primary key(surrogate key) for the table to connect our data model 
+select 
+	ROW_NUMBER() over(order by ci.cst_id) as Customer_key, -- surrogate key
+	ci.cst_id as csutomer_id,
+	ci.cst_key as customer_number,
+	ci.cst_firstname as first_name,
+	ci.cst_lastname as last_name,
+	la.CNTRY as Country,
+	ci.cst_marital_status as marital_status,
+	ca.Bdate as BirthDate,
+	CASE WHEN ci.cst_gndr !='N/A' THEN ci.cst_gndr
+		 ELse coalesce(ca.GEN,'N/A')
+		 End As Gender,
+	ci.cst_create_date as create_date
+
+
+from silver.crm_cust_info ci
+left join silver.erp_cust_az12 ca
+on ci.cst_key=ca.CID
+left join silver.erp_loc_a101 la
+on ci.cst_key=la.CID
+----------------------------------------------------------------------
+create view  gold.dim_Product as
+	select 
+		ROW_NUMBER() over(order by pn.prd_start_dt, pn.prd_key ) as Product_Key,
+		pn.prd_id as Product_id,
+		pn.prd_key as product_number,
+		pn.prd_nm as product_name,
+		pn.cat_id as Catergory_id,
+		pc.CAT as Category,
+		pc.SUBCAT as SubCategory,
+		pc.MAINTENANCE  ,
+		pn.prd_cost as Cost,
+		pn.prd_line as Product_line,
+		pn.prd_start_dt as Start_date
+
+	from silver.crm_prd_info pn
+	left join silver.erp_px_cat_g1v2 pc
+	on pn.cat_id=pc.ID
+	where prd_end_dt is null -- filter out historical data (remove historical data)
+
+-------------------------------------------------------------------------
+
+create view gold.fact_Sales as
+-- we need to add surrgoate keys from our dimensions in the fact table.
+select 
+	sd.sls_ord_num as Order_number,
+	pr.product_key ,
+	cu.customer_key,
+	sd.sls_order_dt as Order_Date,
+	sd.sls_ship_dt as Ship_Date,
+	sd.sls_due_dt as Due_Date,
+	sd.sls_sales as Sales_amount,
+	sd.sls_quantity as Quantity,
+	sd.sls_price as Price
+	
+from silver.crm_sales_details sd
+left join gold.dim_product pr
+on sd.sls_prd_key=pr.product_number
+left join gold.dim_customers cu
+on sd.sls_cust_id=cu.csutomer_id
+
+
+
