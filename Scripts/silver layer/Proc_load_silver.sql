@@ -1,3 +1,14 @@
+/*
+The stored Procedure used to load data from the source Bronze layer into the Silver Layer, calculate the time required to load each table, and
+Calculate the overall time required for the whole process.
+
+This SP doesn't accept any parameters or return any value.
+
+Usage Example:
+	EXEC bronze.load_bornze;
+
+*/
+
 create or alter procedure silver.load_silver as 
 Begin
 	Declare @start_time Datetime, @end_time Datetime, @batch_start_time datetime, @batch_end_time datetime;
