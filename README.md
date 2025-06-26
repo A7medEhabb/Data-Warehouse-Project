@@ -7,9 +7,10 @@ An **end-to-end Data Warehouse project** built using SQL Server, showcasing ETL 
 
 1. [Overview](#-overview)  
 2. [Requirements](#-requirements)  
-3. [Folder Details](#-folder-details)  
-4. [License](#-license)  
-5. [Contact](#-contact)
+3. [Folder Details](#-folder-details)
+4. [Dashboard](#-Dashboard)
+5. [License](#-license)  
+6. [Contact](#-contact)
 
 
 ## 🧠 Overview
@@ -49,6 +50,12 @@ The aim is to demonstrate data modeling, warehousing, and analytics skills using
 |               |     |
 | `README.md`   | This file.                                                                 |
 | `LICENSE`     | MIT License for project usage.                                              |
+
+
+## 📝 Dashboard
+![image](https://github.com/user-attachments/assets/845aa198-8a99-441e-8948-e312ec1f557c)
+![image](https://github.com/user-attachments/assets/845aa198-8a99-441e-8948-e312ec1f557c)
+
 
 
 
