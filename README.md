@@ -54,8 +54,6 @@ The aim is to demonstrate data modeling, warehousing, and analytics skills using
 
 ## 📝 Dashboard
 ![image](https://github.com/user-attachments/assets/845aa198-8a99-441e-8948-e312ec1f557c)
-![image](https://github.com/user-attachments/assets/845aa198-8a99-441e-8948-e312ec1f557c)
-
 
 
 
